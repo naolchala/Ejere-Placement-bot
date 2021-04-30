@@ -1,10 +1,7 @@
-const express = require("express");
-const bodyParser = require("body-parser");
 const TelegramBot = require("node-telegram-bot-api");
 const fs = require("fs");
 const token = "1788932846:AAGpxmRtiVw7LbAsVVAgKioMTB4ug3qywrc";
 
-const app = express();
 const rawdata = fs.readFileSync("students.json", "utf8");
 const students = JSON.parse(rawdata);
 
@@ -100,12 +97,3 @@ Students From Ejere placed into *${student.Placement}*:
 
 	return output;
 };
-
-app.use(bodyParser.json());
-
-app.listen(process.env.PORT);
-
-app.post("/" + bot.token, (req, res) => {
-	bot.processUpdate(req.body);
-	res.sendStatus(200);
-});

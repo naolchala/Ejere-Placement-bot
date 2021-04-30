@@ -7,6 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "micro-bot": "^2.5.3",
     "node-telegram-bot-api": "^0.53.0"
   }
