@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
+    "micro-bot": "^2.5.3",
     "node-telegram-bot-api": "^0.53.0"
   }
 }
