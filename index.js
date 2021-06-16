@@ -2,8 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const TelegramBot = require("node-telegram-bot-api");
 const fs = require("fs");
-const token = "1788932846:AAGpxmRtiVw7LbAsVVAgKioMTB4ug3qywrc";
-
+const token = process.env.token; 
 const app = express();
 const rawdata = fs.readFileSync("students.json", "utf8");
 const students = JSON.parse(rawdata);
